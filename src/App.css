@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@700&display=swap");
+
+:root{
+  --Raleway: 'Raleway', sans-serif;
+  --Montserrat: 'Montserrat', sans-serif; 
+  --White: #fff;
+  --Black: #333333;
+  --Gray: #7c6666;
+  --Gray2: #82828210; 
+  --Blue: #2F80ED;
+  --Red: #ee5253;
+  --Green: #1dd1a1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  font-family: var(--Montserrat);
+  background: #7F7FD5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: var(--Black)
+}
+
+input{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app{
+  width: 400px;
+  height: 500px;
+  background-color: var(--White);
+  border-radius: 7px;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app::-webkit-scrollbar{
+  width: 5px;
+  height: 8px;
+}
+
+.app::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background-color: var(--Red);
+}
+
+.app__title{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--Black);
+}
+
+.btn{
+  cursor: pointer;
+}
+
+.btn-blue{
+  background-color: var(--Blue);
+  color: var(--White);
+}
+
+.btn-red{
+  background-color: var(--Red);
+  color: var(--White);
+}
+
+.btn-green{
+  background-color: var(--Green);
+  color: var(--White);
+}
+
+.app__todos{
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
 }

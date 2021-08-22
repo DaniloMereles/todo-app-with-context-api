@@ -1,0 +1,48 @@
+.form{
+    width: 90%;
+    height: auto;
+}
+
+.form__group{
+    width: 100%;
+    height: 50%;
+}
+
+.form__input{
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 12px;
+    border: 1px solid var(--Gray);
+    background-color: var(--White);
+    font-family: var(--Montserrat);
+    font-weight: 400;
+}
+
+.form__input::placeholder{
+    font-size: 14px;
+    line-height: 17,07px;
+}
+
+.form__button{
+    width: 15%;
+    height: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: var(--Blue);
+}
+
+.form__button > .bx{
+    color: var(--White);
+    font-size: 15px;
+}
+
+.form__message{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2px;
+    border-radius: 8px;
+    background-color: var(--Red);
+    color: var(--White);
+}

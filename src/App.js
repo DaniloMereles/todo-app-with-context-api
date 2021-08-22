@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Form } from './Components/Form/Form'
+import { Todo } from './Components/Todo/Todo'
+import { useContext } from 'react'
+import { storeContext } from './Context/store'
 
-function App() {
+export const App = () => {
+  const {todos} = useContext(storeContext)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className="container">
+      <section className="app">
+        <h1 className="app__title">
+          Todo App
+        </h1>
+        <Form />
 
-export default App;
+        {
+            todos.map(todo => (
+              <Todo 
+                todo={todo}
+                key={todo.id}
+              />
+            ))
+        }
+      </section>
+    </div>
+  )
+}

@@ -1,0 +1,28 @@
+.todo{
+    width: 90%;
+    height: 45px;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: var(--Gray2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: var(--Montserrat);
+    font-size: 12px;
+    line-height: 17,07px;
+}
+
+.todo__buttons{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.todo__btn{
+    width: 40px;
+    height: 70%;
+    margin-left: 10px;
+    border-radius: 4px;
+}
